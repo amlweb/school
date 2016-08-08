@@ -1,2 +1,4 @@
-# school
-sth to learn || presentations
+# todo
+
+1. reval.js
+2. typescript
