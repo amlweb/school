@@ -1,0 +1,9 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "repository": "amlweb/school",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-twig": "^0.5.0"
+  }
+}
