@@ -26,9 +26,95 @@
 			<div class="slides">
 				<section>
 					<h1>Typescript</h1>
-					Slide 1
+					<h2>Alternatywa dla ES6 :)</h2>
 				</section>
-				<section>Slide 2</section>
+
+				<section>
+					<h3>me</h3>
+				</section>
+
+				<section>
+					<h3>Korzyści z używania Typescript</h3>
+					<ol>
+						<li>Due to the static typing, code written in TypeScript is more predictable, and is generally easier to debug.</li>
+						<li>Makes it easier to organize the code base for very large and complicated apps thanks to modules, namespaces and strong OOP support.</li>
+						<li>TypeScript has a compilation step to JavaScript that catches all kinds of errors before they reach runtime and break something.</li>
+						<li>The upcoming Angular 2 framework is written in TypeScript and it’s recommended that developers use the language in their projects as well.</li>
+					</ol>
+				</section>
+
+				<section>
+					<h3>Instalacja</h3>
+					<code><pre>npm install -g typescript</pre></code>
+				</section>
+
+				<section>
+					<h3>Kompilacja do JavaScript</h3>
+					<code><pre>tsc file.ts</pre></code>
+				</section>
+
+				<section>
+					<h3>Static typing</h3>
+					<ol>
+						<li>Number – All numeric values are represented by the number type, there aren’t separate definitions for integers, floats or others.</li>
+						<li>String – The text type, just like in vanilla JS strings can be surrounded by ‘single quotes’ or “double quotes”.</li>
+						<li>Boolean – true or false, using 0 and 1 will cause a compilation error.</li>
+						<li>Any – A variable with this type can have it’s value set to a string, number, or anything else.</li>
+						<li>Arrays – Has two possible syntaxes: my_arr: number[]; or my_arr: Array<number>.</li>
+						<li>Void – Used on function that don’t return anything.</li>
+					</ol>
+					<code><pre>
+						var animal: string = 'cat',
+								age: number = 8,
+								owner: boolean = true;
+					</pre></code>
+				</section>
+
+				<section>
+					<h3>Interfaces</h3>
+					<p>Interfaces are used to type-check whether an object fits a certain structure. By defining an interface we can name a specific combination of variables, making sure that they will always go together. When translated to JavaScript, interfaces disappear – their only purpose is to help in the development stage.</p>
+				</section>
+
+				<section>
+					<h3>Klasy i OOP</h3>
+				</section>
+
+				<section>
+					<h3>Generics</h3>
+					<p>Generics are templates that allow the same function to accept arguments of various different types. Creating reusable components using generics is better than using the any data type, as generics preserve the types of the variables that go in and out of them.</p>
+					<p><small>wiecej na <a href="http://www.typescriptlang.org/docs/handbook/generics.html">link</a></small></p>
+				</section>
+				
+				<section>
+					<h3>Moduły</h3>
+					<strong>exporter.ts</strong>
+					<code><pre>
+						var sayHi = function(): void {
+						    console.log("Hello!");
+						}
+						export = sayHi;
+					</pre></code>
+					<strong>importer.ts</strong>
+					<code><pre>
+						import sayHi = require('./exporter');
+						sayHi();
+					</pre></code>
+				</section>
+				
+				<section>
+					<h3>Przyszłość TypeScript</h3>	
+				</section>
+
+				<section>
+					<h3>Do poczytania</h3>
+					<ol>
+						<li>www.typescriptlang.org/index.html</li>
+					</ol>
+				</section>
+
+				<section>
+					<h3>dziekuje :)</h3>
+				</section>
 			</div>
 		</div>
 
