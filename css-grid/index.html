@@ -20,12 +20,20 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style>
+			.container{
+				display: flex;
+			}
+			.col{
+				flex: 1;
+			}
+		</style>
 	</head>
 
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<!-- 1. START -->
 				<section>
 					<h1>CSS GRID</h1>
 					<p>
@@ -33,23 +41,98 @@
 					</p>
 				</section>
 
-				<!-- 2. GRID vs FLEX -->
-				<section>
-					<h2>Grid vs. Flex</h2>
+				<section data-background-color="#ffffff">
+					<section>TABLE</section>
+					<section>FLOAT</section>
+					<section>FLEX</section>
 				</section>
 
-				<!-- 3. PRZYKŁADY -->
+				<!-- GRID-->
+                <section>
+                    GRID
+                </section>
+                <section>
+                    <h2>IMPLEMENTACJA</h2>
+
+                    <div class="fragment">
+                        display: grid
+                    </div>
+					<div class="fragment">
+						grid-template
+						<br>
+						<small>grid-templates-rows / grid-templates-columns</small>
+					</div>
+					<div class="fragment">
+						grid-gap
+						<br>
+						<small>grid-row-gap grid-column-gap</small>
+					</div>
+                </section>
+
 				<section>
-					<h2>Przykłady</h2>
+					<h2>nowa jednostka długości</h2>
+					<p>fr unit</p>
 				</section>
 
-				<!-- 4. KONIEC -->
+				<section>
+					<h2>KOLUMNY I RZEDY</h2>
+
+					<div class="fragment">
+						grid-rows, grid-cols
+					</div>
+				</section>
+
+                <section>
+                    <h2>OBSZARY</h2>
+
+                    <div class="fragment">
+                        grid-templates-areas
+                    </div>
+                    <div class="fragment">
+						grid-area
+                    </div>
+                </section>
+
+				<section>
+					<h2>ustawienia</h2>
+					<p><small>podobnie do flex</small></p>
+
+						<div class="fragment">
+							 <div data-markdown>
+								```css
+								justify-items: start
+								align-items: start
+
+								place-items: align-items / justify-items;
+								```
+							 </div>
+
+							<small>start | end | center | stretch;</small>
+
+						</div>
+						<div class="fragment">
+							<div data-markdown>
+							```css
+							justify-content: start;
+							align-content: start;
+
+							place-content: align-content / justify-content
+							```
+							</div>
+
+							<small>start | end | center | stretch | space-around | space-between | space-evenly</small>
+						</div>
+
+				</section>
+
+
+				<!-- PRZYKŁAD -->
+				<section data-background-image="http://example.com/image.png">Przykład</section>
+
+				<!-- KONIEC -->
 				<section>
 					<h2>Koniec</h2>
 					<p><small>pytania, podziękowania, brawa</small></p>
-					<aside>
-						grid garden,
-					</aside>
 				</section>
 			</div>
 		</div>
@@ -65,6 +148,7 @@
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
